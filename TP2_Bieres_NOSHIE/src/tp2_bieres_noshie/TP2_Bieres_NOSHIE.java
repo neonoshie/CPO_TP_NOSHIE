@@ -12,8 +12,10 @@ public class TP2_Bieres_NOSHIE {
      */
     public static void main(String[] args) {
         
-        BouteilleBiere uneBiere = new BouteilleBiere("Cuvee des trolls", 7.0, "Dubuisson") ;
+        BouteilleBiere uneBiere = new BouteilleBiere("Cuvee des trolls", 7.0, "Dubuisson");
+        uneBiere.Decapsuler();
         uneBiere.lireEtiquette();
+        
         
         BouteilleBiere deuxBiere = new BouteilleBiere("Leffe", 6.6,"Abbaye de Leffe");
         deuxBiere.lireEtiquette();
@@ -22,6 +24,7 @@ public class TP2_Bieres_NOSHIE {
         troisBiere.lireEtiquette();
         
         BouteilleBiere quatreBiere = new BouteilleBiere("1664", 7.6,"Le louvre");
+        quatreBiere.Decapsuler();
         quatreBiere.lireEtiquette();
         
         BouteilleBiere cinqBiere = new BouteilleBiere("Corona", 6.9,"Voiture");
