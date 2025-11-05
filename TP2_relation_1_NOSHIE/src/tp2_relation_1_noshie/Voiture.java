@@ -6,13 +6,13 @@ public class Voiture {
     String Modele;
     String Marque;
     int PuissanceCV;
-    Personne propietaire;
+    Personne proprietaire;
     
     public Voiture(String Mod, String Mar, int PCV){
        this.Modele = Mod;
        this.Marque = Mar;
        this.PuissanceCV = PCV;
-       this.propietaire = null;
+       this.proprietaire = null;
        
     }
 
