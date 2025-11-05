@@ -9,21 +9,17 @@ public class TP2_relation_1_NOSHIE {
        Voiture une2008 = new Voiture ("2008", "Peugeot", 6 ) ; 
        Voiture uneMicra = new Voiture ("Micra", "Nissan", 4 ) ; 
        Personne bob = new Personne("Bobby", "Sixkiller"); 
-       bob.liste_voitures[0] = uneClio ;
-       bob.liste_voitures[1] = une2008;
-       bob.nbVoiture = 2 ; 
-       uneClio.proprietaire = bob ;
-       une2008.proprietaire = bob ; 
-       
-       System.out.println("la premiere voiture de Bob est " + bob.liste_voitures[0] );
-       System.out.println("la deuxieme voiture de Bob est " + bob.liste_voitures[1] );
        Personne reno = new Personne("Reno", "Raines");
-       reno.liste_voitures[0] = uneMicra ;
-       reno.liste_voitures[1] = uneAutreClio;
-       reno.nbVoiture = 2 ; 
-       uneMicra.proprietaire = reno ;
-       uneAutreClio.proprietaire = reno ; 
+       bob.ajouter_voiture(uneClio);
+       bob.ajouter_voiture(uneAutreClio);
+       reno.ajouter_voiture(une2008);
+       reno.ajouter_voiture(uneMicra);
        
+       
+      System.out.println("Proprietaire de la Clio : " + uneClio.proprietaire);
+        System.out.println("Voiture 1 de Bob : " + bob.liste_voitures[0]);
+        System.out.println("Voiture 1 de Reno : " + reno.liste_voitures[0]);
+        System.out.println("Voiture 2 de Reno : " + reno.liste_voitures[1]);
     }
     
 }
