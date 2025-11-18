@@ -7,8 +7,19 @@ public abstract class Arme {
     int nivAtk;
 
     public Arme(String nomArme, int nivAttaque) {
+        if (nivAtk > 100){
+            nivAtk = 100;
+          }
+        else if ( nivAtk < 0){
+            nivAtk = 0;
+        }
+        else {
+            nivAtk = nivAtk;
+        }
+        nomArme = Weap.get(3);
         this.nom = nomArme;
         this.nivAtk = nivAttaque;
+        
     }
 
     @Override

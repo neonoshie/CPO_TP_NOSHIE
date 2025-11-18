@@ -1,13 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+/**/
 package tp3_heroic_fantasy_noshie;
 
-/**
- *
- * @author neono
- */
-public class Epee {
+public class Epee extends Arme{
+    int finess;
+
+    public Epee(String nomArme, int nivAttaque, int Finess) {
+        super(nomArme, nivAttaque);
+        if (finess > 99){
+            finess = 99;
+          }
+        else if ( finess < 0){
+            finess = 0;
+        }
+        else {
+            finess = finess;
+        }
+    this.finess = Finess;
+    }
+    
     
 }
