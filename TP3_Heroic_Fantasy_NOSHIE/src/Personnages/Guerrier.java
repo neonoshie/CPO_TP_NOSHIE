@@ -1,6 +1,8 @@
 
 package Personnages;
 
+import Armes.Arme;
+
 public class Guerrier extends Personnage {
     
     boolean Cheval;
@@ -9,7 +11,17 @@ public class Guerrier extends Personnage {
         super(Nom, HP);
         this.Cheval = Cheval;
     }
-
+    @Override
+    public int getNbArmesPredilection(){
+        int compteur = 0;
+        
+        for(Arme a : inventaire){
+            if(a.getType() ==1){
+                compteur++;
+            }
+        }
+        return compteur;
+    } 
     public boolean isCheval() {
         return Cheval;
     }

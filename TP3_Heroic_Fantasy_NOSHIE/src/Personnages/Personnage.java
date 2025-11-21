@@ -9,6 +9,10 @@ public class Personnage {
     String nom;
     int nivVie;
     
+    public int getNbArmesPredilection(){
+        return 0;
+    }
+    
       public Personnage(String Nom, int HP) {
         this.nom = Nom;
         this.nivVie = HP;
@@ -55,10 +59,9 @@ public class Personnage {
     public String toString() {
         if (Arme_en_Main != null){
         return "Personnage{" + "nom=" + nom + ", nivVie=" + nivVie + ", inventaire=" + inventaire + ", Arme_en_Main=" + Arme_en_Main + '}';
+        }
+        else {
+            return "pas d'arme en main";
+        }
     }
-
-
-   
-    
-    
 }
