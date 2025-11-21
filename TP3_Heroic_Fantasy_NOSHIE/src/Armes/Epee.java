@@ -1,5 +1,5 @@
 /**/
-package tp3_heroic_fantasy_noshie;
+package Armes;
 
 public class Epee extends Arme{
     int finess;
@@ -16,6 +16,12 @@ public class Epee extends Arme{
             finess = finess;
         }
     this.finess = Finess;
+    
+    }
+
+    @Override
+    public String toString() {
+        return "Epee{" + "finess=" + finess + '}';
     }
     
     

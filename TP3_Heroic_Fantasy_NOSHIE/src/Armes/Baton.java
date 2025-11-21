@@ -1,5 +1,5 @@
 /**/
-package tp3_heroic_fantasy_noshie;
+package Armes;
 
 public class Baton extends Arme{
     int age;
