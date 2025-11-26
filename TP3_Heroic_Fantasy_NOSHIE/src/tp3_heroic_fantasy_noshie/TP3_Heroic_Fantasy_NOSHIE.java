@@ -12,8 +12,7 @@ import java.util.ArrayList;
 public class TP3_Heroic_Fantasy_NOSHIE {
 
     public static void main(String[] args) {
- 
-    
+        
       Magicien m1 = new Magicien("Gandalf",65,true);
       Guerrier g1 = new Guerrier("Conan", 78, false);
 
@@ -58,5 +57,36 @@ public class TP3_Heroic_Fantasy_NOSHIE {
       System.out.println("Personnages : ");
       System.out.println(g1);
       System.out.println(m1);
+      
+      System.out.println("Armes preferees du magicien : " + m1.getNbArmesPredilection());
+      System.out.println("Armes preferees du guerrier : " + g1.getNbArmesPredilection());
+      
+      System.out.println("Nombre total de personnages : " + Personnage.nbPersonnages);
+      System.out.println("Nombre de guerriers : " + Guerrier.nbGuerriers);
+      System.out.println("Nombre de magiciens : " + Magicien.nbMagiciens);
+      
+      Guerrier g = new Guerrier ("Conan",80,true);
+      Magicien m = new Magicien ("Merlin",60,true);
+      
+      
+      
+      g.seFatiguer();
+      
+      if (g.estVivant()){
+          System.out.println(g.getNom()+" est toujours vivant.");
+      }
+      else{
+          System.out.println(g.getNom()+" est mort.");
+      }
+      
+      g.attaquer(m);
+      
+      System.out.println(m);
+      System.out.println(g);
+      
+      
+      
+      
+      
     }
 }

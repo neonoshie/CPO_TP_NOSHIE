@@ -5,7 +5,7 @@ import Armes.Arme;
 import java.util.ArrayList;
 
 
-public class Personnage {
+public class Personnage implements etreVivant{
     String nom;
     int nivVie;
     
@@ -16,6 +16,7 @@ public class Personnage {
       public Personnage(String Nom, int HP) {
         this.nom = Nom;
         this.nivVie = HP;
+        nbPersonnages++;
     }
 
     ArrayList<Arme> inventaire = new ArrayList<>();
@@ -54,7 +55,26 @@ public class Personnage {
             System.out.println("Index invalide, impossible d'equiper une arme. ");
         }
     }
-
+    public static int nbPersonnages = 0;
+    
+    @Override
+    public void seFatiguer(){
+        this.nivVie -= 10;
+    }
+    
+    @Override
+    public boolean estVivant(){
+        return this.nivVie > 0;
+    }
+    
+    @Override
+    public void estAttaque(int points){
+        this.nivVie -= points;
+    }
+    public void attaquer (Personnage cible){
+        
+    }
+    
     @Override
     public String toString() {
         if (Arme_en_Main != null){
@@ -64,4 +84,8 @@ public class Personnage {
             return "pas d'arme en main";
         }
     }
+    @Override
+    protected void finalize() {
+    nbPersonnages--;
+    }  
 }

@@ -4,7 +4,8 @@ package Armes;
 public abstract class Arme {
 
     String nom;
-    int nivAtk;
+    public int nivAtk;
+    int type;
 
     public Arme(String nomArme, int nivAttaque) {
         if (nivAtk > 100) {
@@ -18,6 +19,7 @@ public abstract class Arme {
         this.nivAtk = nivAttaque;
 
     }
+    
 
     @Override
     public String toString() {
@@ -25,12 +27,14 @@ public abstract class Arme {
     }
 
     public String getNom() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return nom;
     }
 
     public int getType() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return type;
     }
+
+    
 
    
     

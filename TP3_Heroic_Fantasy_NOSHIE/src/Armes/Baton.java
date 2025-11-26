@@ -26,4 +26,9 @@ public Baton(String nomArme, int nivAttaque, int Age) {
         return type;
     }
 
+    public int getAge() {
+        return age;
+    }
+    
+
 }

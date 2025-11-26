@@ -27,6 +27,12 @@ public class Epee extends Arme{
         return type;
     }
 
+    public int getFiness() {
+        return finess;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "Epee{" + "finess=" + finess + '}';
