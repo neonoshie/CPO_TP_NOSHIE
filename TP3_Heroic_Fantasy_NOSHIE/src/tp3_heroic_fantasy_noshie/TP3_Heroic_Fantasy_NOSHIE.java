@@ -13,16 +13,16 @@ public class TP3_Heroic_Fantasy_NOSHIE {
 
     public static void main(String[] args) {
         
-      Magicien m1 = new Magicien("Gandalf",65,true);
-      Guerrier g1 = new Guerrier("Conan", 78, false);
+      Magicien m1 = new Magicien("Gandalf",60,false);
+      Guerrier g1 = new Guerrier("Conan", 80, true);
 
       Baton b1 = new Baton ("Chêne", 4, 5);
       Baton b2 = new Baton ("Charme", 5, 6);
-      Baton b3 = new Baton ("Bois Sacre", 8, 7);
+      /*Baton b3 = new Baton ("Bois Sacre", 8, 7);*/
       
       Epee e1 = new Epee("Excalibur",7,5);
       Epee e2 = new Epee("Durandal",4,7);
-      Epee e3 = new Epee("Blood Hound Fang", 9, 9);
+      /*Epee e3 = new Epee("Blood Hound Fang", 9, 9);*/
       
       
       ArrayList<Personnage> ListPerso = new ArrayList<>();
@@ -35,30 +35,45 @@ public class TP3_Heroic_Fantasy_NOSHIE {
       ArrayList<Arme> ListArme = new ArrayList<>();
              ListArme.add(e1);
              ListArme.add(e2);
-             ListArme.add(e3);
+             /*ListArme.add(e3);*/
              ListArme.add(b1);
              ListArme.add(b2);
-             ListArme.add(b3);
+             /*ListArme.add(b3);*/
              
       for (Arme arme : ListArme) {
     System.out.println(arme);
     }
-      g1.Ajouter_Arme(b1);
+     
       g1.Ajouter_Arme(e1);
-      g1.Ajouter_Arme(e2);
-      g1.equipeArme(1);
+      g1.Ajouter_Arme(b1);
+      /*g1.equipeArme(1);*/
       
+      m1.Ajouter_Arme(e2);
       m1.Ajouter_Arme(b2);
-      m1.Ajouter_Arme(b3);
-      m1.Ajouter_Arme(e3);
+      /*m1.Ajouter_Arme(e3);*/
       
-      System.out.println("Nombre d'armes preferees de "+m1.getNom()+" : "+m1.getNbArmesPredilection());
+      /*System.out.println("Nombre d'armes preferees de "+m1.getNom()+" : "+m1.getNbArmesPredilection());*/
       
       System.out.println("Personnages : ");
       System.out.println(g1);
       System.out.println(m1);
       
-      System.out.println("Armes preferees du magicien : " + m1.getNbArmesPredilection());
+      g1.equipeArme(0);
+      m1.equipeArme(1);
+      
+      m1.attaquer(g1);
+      System.out.println(g1);
+      System.out.println(m1);
+      
+      g1.attaquer(m1);
+      System.out.println(g1);
+      System.out.println(m1);
+      
+      System.out.println("Le magicien est vivant ? " + m1.estVivant());
+      System.out.println("Le guerrier est vivant ? " + g1.estVivant());
+
+      
+      /*System.out.println("Armes preferees du magicien : " + m1.getNbArmesPredilection());
       System.out.println("Armes preferees du guerrier : " + g1.getNbArmesPredilection());
       
       System.out.println("Nombre total de personnages : " + Personnage.nbPersonnages);
@@ -82,7 +97,7 @@ public class TP3_Heroic_Fantasy_NOSHIE {
       g.attaquer(m);
       
       System.out.println(m);
-      System.out.println(g);
+      System.out.println(g);*/
       
       
       
